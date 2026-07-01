@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: docs-navigator-api
+    runtime: docker
+    plan: standard
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: QDRANT_URL
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_COLLECTION
+        value: docs
+      - key: TOKENIZERS_PARALLELISM
+        value: "false"

@@ -1,0 +1,344 @@
+{
+  "questions": [
+    {
+      "question": "What languages do I need to know to use Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started",
+      "gold_section": "Pre-requisite knowledge"
+    },
+    {
+      "question": "How do I create a new Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/installation",
+      "gold_section": "Quick start"
+    },
+    {
+      "question": "What browsers do Next.js support?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/installation",
+      "gold_section": "Supported browsers"
+    },
+    {
+      "question": "How do you manually create a Next.js app from scratch?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/installation",
+      "gold_section": "Manual installation"
+    },
+    {
+      "question": "Does Next.js support TypeScript or just JavaScript?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/installation",
+      "gold_section": "Set up TypeScript"
+    },
+    {
+      "question": "What linters does Next.js support?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/installation",
+      "gold_section": "Set up linting"
+    },
+    {
+      "question": "Where is the Typescript declaration file stored in a Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/project-structure",
+      "gold_section": "Top-level files"
+    },
+    {
+      "question": "How can I parameterize a route using optional catch-all routes in Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/project-structure",
+      "gold_section": "Dynamic routes"
+    },
+    {
+      "question": "When would I use intercepted routes?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/project-structure",
+      "gold_section": "Parallel and Intercepted Routes"
+    },
+    {
+      "question": "Are private folders required for colocation?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/project-structure",
+      "gold_section": "Private folders"
+    },
+    {
+      "question": "How do I define a layout in Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/layouts-and-pages",
+      "gold_section": "Creating a layout"
+    },
+    {
+      "question": "How would I go about creating a nested route?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/layouts-and-pages",
+      "gold_section": "Creating a nested route"
+    },
+    {
+      "question": "What are dynamic segments in Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/layouts-and-pages",
+      "gold_section": "Creating a dynamic segment"
+    },
+    {
+      "question": "What are the types of server rendering that Next.js supports?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/linking-and-navigating",
+      "gold_section": "Server Rendering"
+    },
+    {
+      "question": "How can I use streaming in my project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/linking-and-navigating",
+      "gold_section": "Streaming"
+    },
+    {
+      "question": "How do I use a third-party component library in my Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      "gold_section": "Third-party components"
+    },
+    {
+      "question": "What is the difference between server and client components?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      "gold_section": "When to use Server and Client Components?"
+    },
+    {
+      "question": "How can I use the fetch API to fetch data in my Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/fetching-data",
+      "gold_section": "With the fetch API"
+    },
+    {
+      "question": "How can I use Suspense to fetch data in my Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/fetching-data",
+      "gold_section": "With <Suspense>"
+    },
+    {
+      "question": "In what ways can I fetch data in a client component?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/fetching-data",
+      "gold_section": "Client Components"
+    },
+    {
+      "question": "How do I create a server function?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/mutating-data",
+      "gold_section": "Creating Server Functions"
+    },
+    {
+      "question": "What are the ways in which I can invoke a server function?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/mutating-data",
+      "gold_section": "Invoking Server Functions"
+    },
+    {
+      "question": "How do I cache an async function in my Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/caching",
+      "gold_section": "Data-level caching"
+    },
+    {
+      "question": "What does Next.js use to handle uncaught exceptions and how can I use it?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/error-handling",
+      "gold_section": "Nested error boundaries"
+    },
+    {
+      "question": "What meta tags are available in Next.js and how can I use them?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/metadata-and-og-images",
+      "gold_section": "Default fields"
+    },
+    {
+      "question": "How does Next.js handle metadata for dynamically rendered pages?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/metadata-and-og-images",
+      "gold_section": "Streaming metadata"
+    },
+    {
+      "question": "What HTTP methods are supported by Next.js route handlers?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/route-handlers",
+      "gold_section": "Supported HTTP Methods"
+    },
+    {
+      "question": "Are route handlers cached by default in Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/route-handlers",
+      "gold_section": "Caching"
+    },
+    {
+      "question": "When should I use a Next.js proxy?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/proxy",
+      "gold_section": "Use cases"
+    },
+    {
+      "question": "How do I create a Proxy?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/proxy",
+      "gold_section": "Convention"
+    },
+    {
+      "question": "Does Next.js support deploying as a static site?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/deploying",
+      "gold_section": "Static export"
+    },
+    {
+      "question": "What verified adapters does Next.js support for deployment?",
+      "gold_page_url": "https://nextjs.org/docs/app/getting-started/deploying",
+      "gold_section": "Verified Adapters"
+    },
+    {
+      "question": "How can I create stateless sessions?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/authentication",
+      "gold_section": "Stateless Sessions"
+    },
+    {
+      "question": "What are the types of authorization checks that Next.js supports?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/authentication",
+      "gold_section": "Authorization"
+    },
+    {
+      "question": "What do NextRequest and NextResponse provide?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/backend-for-frontend",
+      "gold_section": "NextRequest and NextResponse"
+    },
+    {
+      "question": "Will RouteHandlers fail in Server Components prerendered at build time?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/backend-for-frontend",
+      "gold_section": "Server Components"
+    },
+    {
+      "question": "What does force-dynamic do?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/caching-without-cache-components",
+      "gold_section": "Route segment config"
+    },
+    {
+      "question": "What options are there for default revalidation time for a page?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/caching-without-cache-components",
+      "gold_section": "Route segment config revalidate"
+    },
+    {
+      "question": "What Cache-Control headers does Next.js set by default?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/cdn-caching",
+      "gold_section": "Cache-Control headers"
+    },
+    {
+      "question": "What will change when cache-affecting inputs are moved to the URL pathname?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/cdn-caching",
+      "gold_section": "What changes for interception routes"
+    },
+    {
+      "question": "What benefit does using a nonce provide?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/content-security-policy",
+      "gold_section": "Why use a nonce?"
+    },
+    {
+      "question": "How does nonce support work in a dynamically rendered page?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/content-security-policy",
+      "gold_section": "How nonces work in Next.js"
+    },
+    {
+      "question": "What ways are there to fetch data?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/data-security",
+      "gold_section": "Data fetching approaches"
+    },
+    {
+      "question": "What is a Data Access Layer?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/data-security",
+      "gold_section": "Data Access Layer"
+    },
+    {
+      "question": "How can I solve server instances having different encryption keys?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/data-security",
+      "gold_section": "Overwriting encryption keys (advanced)"
+    },
+    {
+      "question": "How do I debug my Next.js project with DevTools?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/debugging",
+      "gold_section": "Client-side code"
+    },
+    {
+      "question": "Which metrics can I use to measure platform support for Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/deploying-to-platforms",
+      "gold_section": "Functional Fidelity vs. Performance Fidelity"
+    },
+    {
+      "question": "What is a verified adapter?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/deploying-to-platforms",
+      "gold_section": "Verified Adapters"
+    },
+    {
+      "question": "What does Draft Mode do?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/draft-mode",
+      "gold_section": "What Draft Mode does"
+    },
+    {
+      "question": "Can I use Draft Mode with Cache Components?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/draft-mode",
+      "gold_section": "Draft Mode with Cache Components"
+    },
+    {
+      "question": "How do I load environment variables outside of runtime in Next.js?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/environment-variables",
+      "gold_section": "Loading Environment Variables with @next/env"
+    },
+    {
+      "question": "How do I make environment variables accessible in the browser?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/environment-variables",
+      "gold_section": "Bundling Environment Variables for the Browser"
+    },
+    {
+      "question": "What are Test Environment Variables and how do I use them?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/environment-variables",
+      "gold_section": "Test Environment Variables"
+    },
+    {
+      "question": "What types of revalidation does Next.js support?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/how-revalidation-works",
+      "gold_section": "The Revalidation Model"
+    },
+    {
+      "question": "How does Next.js handle soft tags?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/how-revalidation-works",
+      "gold_section": "Soft tags"
+    },
+    {
+      "question": "How can I improve development performance on my computer?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/local-development",
+      "gold_section": "Improving local dev performance"
+    },
+    {
+      "question": "How can I use turbopack tracing to debug my Next.js project?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/local-development",
+      "gold_section": "Turbopack tracing"
+    },
+    {
+      "question": "What does PPR do at request time?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/ppr-platform-guide",
+      "gold_section": "Request time"
+    },
+    {
+      "question": "How are PPR routes identified in adapter output?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/ppr-platform-guide",
+      "gold_section": "Finding PPR routes in build output"
+    },
+    {
+      "question": "What optimizations does Next.js have out of the box for production?",
+      "gold_page_url": "https://nextjs.org/docs/app/guides/production-checklist",
+      "gold_section": "Automatic optimizations"
+    },
+    {
+      "question": "How do I configure SvelteKit routing?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I set up a LangChain agent?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I define a FastAPI route?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How does Next.js compare to Remix in production performance?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I configure Nginx as a reverse proxy for my Next.js application?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I set up a CloudFront CDN for my Next.js application?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I write a tRPC router?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I implement real-time collaboration in Next.js?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I define a Prisma schema?",
+      "out_of_scope": true
+    },
+    {
+      "question": "How do I implement Redux in my React app?",
+      "out_of_scope": true
+    }
+  ]
+}
