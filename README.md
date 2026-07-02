@@ -8,8 +8,9 @@ Covers four libraries: **Next.js · LangChain · LlamaIndex · Haystack**
 
 ---
 
-![Docs Navigator screenshot](docs/screenshot.png)
-<!-- Replace with an actual screenshot after first deploy -->
+![Docs Navigator — hero](docs/screenshot-hero.png)
+
+![Docs Navigator — answer](docs/screenshot-answer.png)
 
 ---
 
