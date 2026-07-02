@@ -10,7 +10,7 @@ from ingestion.libraries import LIBRARIES
 from ingestion.store import ensure_collection, upsert_chunks
 
 
-def run(library_name: str) -> None:
+def run(library_name: str, recreate: bool = False) -> None:
     if library_name not in LIBRARIES:
         raise ValueError(
             f"Unknown library '{library_name}'. Available: {list(LIBRARIES)}"
@@ -30,12 +30,12 @@ def run(library_name: str) -> None:
     chunks = chunk_docs(pages, library=library_name)
     print(f"      {len(chunks)} chunks created")
 
-    print("[3/4] Embedding...")
-    embeddings = embed_chunks(chunks)
+    print("[3/4] Embedding (dense + sparse in one pass)...")
+    dense_embeddings, sparse_embeddings = embed_chunks(chunks)
 
     print("[4/4] Storing in Qdrant...")
-    ensure_collection(client)
-    upsert_chunks(client, chunks, embeddings)
+    ensure_collection(client, recreate=recreate)
+    upsert_chunks(client, chunks, dense_embeddings, sparse_embeddings)
 
     print("\nDone.")
 
@@ -43,5 +43,10 @@ def run(library_name: str) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ingest docs into Qdrant.")
     parser.add_argument("--library", required=True, help="Library name from libraries.py")
+    parser.add_argument(
+        "--recreate",
+        action="store_true",
+        help="Delete and recreate the collection before ingesting (required when changing vector schema)",
+    )
     args = parser.parse_args()
-    run(args.library)
+    run(args.library, recreate=args.recreate)

@@ -1,8 +1,16 @@
 from qdrant_client import QdrantClient
-from qdrant_client.models import FieldCondition, Filter, MatchValue
+from qdrant_client.models import (
+    FieldCondition,
+    Filter,
+    Fusion,
+    FusionQuery,
+    MatchValue,
+    Prefetch,
+)
 
 from app.core.config import settings
-from ingestion.embedder import embed_query
+from app.services.reranker import rerank
+from ingestion.embedder import embed_query, embed_query_hybrid
 
 _client: QdrantClient | None = None
 
@@ -18,28 +26,61 @@ def _get_client() -> QdrantClient:
 
 
 def retrieve(library: str, question: str, top_k: int | None = None) -> list[dict]:
-    """Embed the question and return the top-k most relevant chunks for the library."""
+    """Hybrid retrieval (dense + sparse, RRF) followed by cross-encoder reranking."""
     if top_k is None:
         top_k = settings.top_k
 
-    query_vector = embed_query(question)
-
-    results = _get_client().search(
-        collection_name=settings.qdrant_collection,
-        query_vector=query_vector,
-        query_filter=Filter(
-            must=[FieldCondition(key="library", match=MatchValue(value=library))]
-        ),
-        limit=top_k,
-        with_payload=True,
+    library_filter = Filter(
+        must=[FieldCondition(key="library", match=MatchValue(value=library))]
     )
 
-    return [
+    # Fetch a larger candidate pool so the reranker has room to reorder.
+    candidates = max(settings.rerank_candidates, top_k)
+
+    if settings.use_hybrid:
+        # Single BGE-M3 pass produces both vectors
+        dense_vector, sparse_vector = embed_query_hybrid(question)
+        response = _get_client().query_points(
+            collection_name=settings.qdrant_collection,
+            prefetch=[
+                Prefetch(
+                    query=dense_vector,
+                    using="dense",
+                    filter=library_filter,
+                    limit=candidates,
+                ),
+                Prefetch(
+                    query=sparse_vector,
+                    using="sparse",
+                    filter=library_filter,
+                    limit=candidates,
+                ),
+            ],
+            query=FusionQuery(fusion=Fusion.RRF),
+            limit=candidates,
+            with_payload=True,
+        )
+    else:
+        dense_vector = embed_query(question)
+        response = _get_client().query_points(
+            collection_name=settings.qdrant_collection,
+            query=dense_vector,
+            using="dense",
+            query_filter=library_filter,
+            limit=candidates,
+            with_payload=True,
+        )
+
+    chunks = [
         {
             "page_url": hit.payload["page_url"],
             "section": hit.payload["section"],
             "text": hit.payload["text"],
             "score": hit.score,
         }
-        for hit in results
+        for hit in response.points
     ]
+
+    if settings.use_reranker:
+        return rerank(question, chunks, top_k=top_k)
+    return chunks[:top_k]

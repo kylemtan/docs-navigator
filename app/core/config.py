@@ -12,7 +12,11 @@ class Settings(BaseSettings):
     github_token: str = ""
 
     embedding_model: str = "BAAI/bge-m3"
+    reranker_model: str = "BAAI/bge-reranker-v2-m3"
     top_k: int = 5
+    rerank_candidates: int = 20
+    use_hybrid: bool = True
+    use_reranker: bool = True
     claude_model: str = "claude-haiku-4-5-20251001"
 
 
